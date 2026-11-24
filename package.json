@@ -1,0 +1,67 @@
+{
+  "name": "@limccn/tokimeki-dsh",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness (dsh) plugin with read-only, plan-only tokimeki tools",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "cordis.patch.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b tsconfig.json",
+    "typecheck": "tsc -b tsconfig.json --pretty false",
+    "test": "vitest run",
+    "verify": "npm run typecheck && npm test",
+    "prepack": "npm run build"
+  },
+  "engines": {
+    "node": ">=24.9"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1-rc.1",
+    "@deepseek-ai/dsh-tools": "^0.0.1-rc.1"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "4.1.0",
+    "@deepseek-ai/dsh-tools": "0.0.1-rc.1",
+    "@types/node": "24.19.2",
+    "typescript": "5.9.3",
+    "vitest": "3.2.7"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "tokimeki",
+    "terminal"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/limccn/tokimeki-dsh.git"
+  },
+  "homepage": "https://github.com/limccn/tokimeki-dsh#readme",
+  "bugs": {
+    "url": "https://github.com/limccn/tokimeki-dsh/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
