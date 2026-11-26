@@ -11,3 +11,10 @@
 - Host paths aligned with the tokimeki v1.4 skill: self-hosted (one-click
   deploy, guide-only), TokiAPI anonymous (24h/rate-limited/no revocation), and
   TokiAPI account (30d Host JWT or downloaded `--config`).
+- README rewritten with the shared tokimeki icon, npm/CI/license/Node badges,
+  and a shorter quick-start-first structure; detailed material moved to docs.
+- New `docs/usage.md` (tool reference, host paths, attach sources, listener,
+  passcode, troubleshooting) and three scenario guides: home-NAT mobile via
+  the TokiAPI web viewer, US host running Claude Code, and cross-Pacific
+  transport/encryption.
+- First public npm release: `0.1.0`.
