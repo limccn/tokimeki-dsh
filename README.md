@@ -17,7 +17,8 @@
   Read-only, plan-only <a href="https://github.com/limccn/tokimeki">tokimeki</a> tools for DeepSeek Harness (dsh).
 </p>
 
-> **Status:** `0.1.0` is the first public release (npm + GitHub Release).
+> **Status:** `0.1.1` is the current release (dsh 0.2.2-rc.5 compatible).
+> `0.1.0` was the first public release.
 
 `tokimeki-dsh` lets a dsh agent inspect a tokimeki setup, generate host /
 attach / share plans, and run a redacted `tokimeki doctor`. It never starts a
@@ -51,10 +52,11 @@ Then ask the agent:
 - “Plan how to attach to a TokiAPI share URL.” (Keep the URL in your own
   environment; do not paste it into chat.)
 
-Requirements: dsh with the cordis `tools` service and Node >= 24.9. The
-tokimeki CLI needs Node >= 22.12 and npm >= 11; onboarding paths below need
-tokimeki >= 0.1.5 (0.1.7 is the current release). The plugin ships as a native
-dsh bundle (`package.json.dsh.bundle.patch` + `cordis.patch.yml`).
+Requirements: dsh with the cordis `tools` service and Node >= 24.9 (verified
+with dsh 0.2.2-rc.5 / `@deepseek-ai/dsh-tools` 0.2.2-rc.5). The tokimeki CLI
+needs Node >= 22.12 and npm >= 11; onboarding paths below need tokimeki
+>= 0.1.5 (0.1.7 is the current release). The plugin ships as a native dsh
+bundle (`package.json.dsh.bundle.patch` + `cordis.patch.yml`).
 
 Uninstall: remove the plugin from the dsh profile and
 `npm uninstall @limccn/tokimeki-dsh`. There are no hooks, caches, or state

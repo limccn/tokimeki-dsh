@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1] - 2026-11-26
+
+- Widen the `@deepseek-ai/dsh-tools` peer range to
+  `^0.0.1-rc.1 || ^0.2.2-rc.5` and typecheck against `0.2.2-rc.5`, so dsh
+  0.2.2-rc.5 accepts the plugin instead of rejecting the old peer requirement.
+- No tool behavior changes; the five read-only/plan-only tools are unchanged.
+
 ## [0.1.0] - 2026-11-23
 
 - Initial native dsh bundle: `tokimeki_doctor`, `tokimeki_status`,
